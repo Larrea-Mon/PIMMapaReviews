@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Street {
 	String name;
 	ArrayList<Review> reviews;
-	ArrayList<Point> connections;
+	ArrayList<Lugar> connections;
 	public String getName() {
 		return name;
 	}
@@ -18,10 +18,10 @@ public class Street {
 	public void setReviews(ArrayList<Review> reviews) {
 		this.reviews = reviews;
 	}
-	public ArrayList<Point> getConnections() {
+	public ArrayList<Lugar> getConnections() {
 		return connections;
 	}
-	public void setConnections(ArrayList<Point> connections) {
+	public void setConnections(ArrayList<Lugar> connections) {
 		this.connections = connections;
 	}
 	@Override
