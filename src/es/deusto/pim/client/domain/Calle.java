@@ -1,11 +1,11 @@
 package es.deusto.pim.client.domain;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Calle {
 	String name;
 	ArrayList<Review> reviews;
-	ArrayList<Lugar> connections;
 	public String getName() {
 		return name;
 	}
@@ -18,18 +18,22 @@ public class Calle {
 	public void setReviews(ArrayList<Review> reviews) {
 		this.reviews = reviews;
 	}
-	public ArrayList<Lugar> getConnections() {
-		return connections;
-	}
-	public void setConnections(ArrayList<Lugar> connections) {
-		this.connections = connections;
-	}
 	@Override
 	public String toString() {
-		return "Street [name=" + name + ", reviews=" + reviews + ", connections=" + connections + "]";
+		return name;
 	}
 	public Calle(String name) {
 		super();
 		this.name = name;
+		this.reviews = new ArrayList<>();
+		
+	}
+	public float getAverageReviewScore() {
+		int result = 0;
+		for (int i = 0; i < reviews.size(); i++) {
+			result = result + reviews.get(i).getScore();
+		}
+		result = result/reviews.size();
+		return result;
 	}
 }
