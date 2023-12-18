@@ -2,7 +2,7 @@ package es.deusto.pim.client.domain;
 
 import java.util.ArrayList;
 
-public class Street {
+public class Calle {
 	String name;
 	ArrayList<Review> reviews;
 	ArrayList<Lugar> connections;
@@ -28,7 +28,7 @@ public class Street {
 	public String toString() {
 		return "Street [name=" + name + ", reviews=" + reviews + ", connections=" + connections + "]";
 	}
-	public Street(String name) {
+	public Calle(String name) {
 		super();
 		this.name = name;
 	}

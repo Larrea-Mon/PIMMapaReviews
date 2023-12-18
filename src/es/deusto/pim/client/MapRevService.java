@@ -2,26 +2,26 @@ package es.deusto.pim.client;
 
 import java.util.Scanner;
 
-public class MapaReviewsService {
+public class MapRevService {
 	
-	private static MapaReviewsService instance;
+	private static MapRevService instance;
 	private Scanner in;
 	private int choice;
 	
-	public static MapaReviewsService getInstance() {
+	public static MapRevService getInstance() {
 		if(instance == null) {
-			instance = new MapaReviewsService();
+			instance = new MapRevService();
 		}
 		return instance;
 	}
-	private MapaReviewsService() {
+	private MapRevService() {
 		
 	}
 	
 	
 	public void run() {
 		System.out.println("Vienvenid@ al sistema de busqueda de caminos adaptados a personas con movilidad reducida");
-		MapaReviewsMain.populateDB();
+		MapRevCon.populateDB();
 		menu1();
 	}
 	private void menu1() {
